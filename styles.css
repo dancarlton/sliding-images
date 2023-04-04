@@ -125,28 +125,33 @@ a {
 
 /* ------------- Link Styles ----------------- */
   
-#source-link {
+#source-link-1 {
     bottom: 60px;
+    margin-bottom: 10px;
+  }
+#source-link-2 {
+    margin-top: 10px;
 }
   
-.meta-link {
-    align-items: center;
-    backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    bottom: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;  
-    display: inline-flex;
-    gap: 5px;
-    left: 10px;
-    padding: 10px 20px;
-    position: fixed;
-    text-decoration: none;
-    transition: background-color 400ms, border-color 400ms;
-    z-index: 10000;
-}
+    .meta-link {
+        align-items: center;
+        backdrop-filter: blur(3px);
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        bottom: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: inline-flex;
+        flex-direction: row;
+        gap: 5px;
+        left: 10px;
+        padding: 10px;
+        position: fixed;
+        text-decoration: none;
+        transition: background-color 400ms, border-color 400ms;
+    }
+  
   
 .meta-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
