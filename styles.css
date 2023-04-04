@@ -12,7 +12,6 @@ body {
     padding: 15px 5px;
 }
 
-
 /* ---------sliding images---------- */
 
 #image-track {
@@ -22,7 +21,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%); 
-    user-select: none; -- Prevent image highlighting --
+    user-select: none;
 }
 
 #image-track > a > .image {
