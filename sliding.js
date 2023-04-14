@@ -1,3 +1,5 @@
+// ---------sliding images---------
+
 const track = document.getElementById("image-track");
 
 const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
@@ -42,3 +44,29 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+
+
+// ----------sliding bar----------
+
+const sliderCircle = document.querySelector('.slider-circle');
+const sliderBar = document.querySelector('.slider-bar');
+let isDragging = false;
+
+sliderCircle.addEventListener('mousedown', (event) => {
+  isDragging = true;
+});
+
+document.addEventListener('mouseup', (event) => {
+  isDragging = false;
+});
+
+document.addEventListener('mousemove', (event) => {
+  if (isDragging) {
+    const sliderRect = sliderBar.getBoundingClientRect();
+    let newPosition = event.clientX - sliderRect.left;
+    newPosition = Math.max(newPosition, 0);
+    newPosition = Math.min(newPosition, sliderRect.width);
+    sliderCircle.style.right = `${sliderRect.width - newPosition}px`;
+  }
+});

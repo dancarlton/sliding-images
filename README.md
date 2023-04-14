@@ -6,3 +6,5 @@ https://sliding-images.netlify.app/
 
 Recommendations:
 1. Use photos that are 1600px x 1600px or larger. Just make sure they are naturally landscape images and a good amount of pixels so the scrolling effect works well and the image is not blurry. 
+
+// cant figure out why the browser needs to be reloaded sometimes
